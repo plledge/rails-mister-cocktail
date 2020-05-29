@@ -15,7 +15,7 @@
               <h2 class='card-title'><%= link_to "#{cocktail.name}", cocktail_path(cocktail) %></h2>
               <br>
               <%= cocktail.ingredients do |ingredient| %>
-                <li><%= ingredient.name %></li>
+                <li><%= ingredient.description %></li>
               <% end %> 
             </div>
           </div>
