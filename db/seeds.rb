@@ -14,10 +14,10 @@ Cocktail.create(name: "Mojito")
 
 require 'json'
 require 'rest-client'
+require 'open-uri'
 
-
-
-# records = JSON.parse(RestClient.get 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'))
+#  file = URI.open('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list')
+# records = JSON.parse(file)
 
 # records.each do |ing|
 #   Ingredient.create(name: ing[0].value)
