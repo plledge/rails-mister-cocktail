@@ -9,10 +9,18 @@ Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
 
-# records = JSON.parse(File.read('https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'))
+Cocktail.create(name: "Manhattan")
+Cocktail.create(name: "Mojito")
+
+require 'json'
+require 'rest-client'
+
+
+
+# records = JSON.parse(RestClient.get 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'))
 
 # records.each do |ing|
-#   Ingredient.create(name: record.value)
+#   Ingredient.create(name: ing[0].value)
 # end
 
 # check json parse lessons
