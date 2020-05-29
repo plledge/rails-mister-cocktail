@@ -35,7 +35,7 @@ class CocktailsController < ApplicationController
   def cocktail_params
         # pegue a hash cocktails dentro de params e só permita os campos abaixo
     # (qualquer outro não passará)
-    params.require(:cocktail).permit(:name)
+    params.require(:cocktail).permit(:name, :photo)
   end
 
 end

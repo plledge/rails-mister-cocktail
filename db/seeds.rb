@@ -9,8 +9,6 @@ Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
 
-Cocktail.create(name: "Manhattan")
-Cocktail.create(name: "Mojito")
 
 require 'json'
 require 'rest-client'
@@ -24,3 +22,15 @@ require 'open-uri'
 # end
 
 # check json parse lessons
+
+# MARASCHINO CHERRIES
+# MINT LEAVES
+# BITTERS
+# SUGAR
+# ICE
+# ORANGES
+# EGGS
+# LEMON
+# LIME
+# SYRUP
+# SALT AND PEPPER

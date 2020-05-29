@@ -1,17 +1,21 @@
 <div class="container mt-2">
   <h1>Mr Cocktail</h1>
-  <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary" %>
+  <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-warning" %>
   <br>
   <br>
   <div class="container">
     <div class="row">
-      <% @cocktails.each do |lst| %>
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="card" >
-            <h2><%= link_to "#{lst.name}", cocktail_path(lst) %></h2>
-            <ul>
-              <li><%= lst.ingredients%></li> 
-            </ul>
+      <% @cocktails.each do |cocktail| %>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card m-4">
+            <%= cl_image_tag(cocktail.photo.key, height: 300, width: 300, crop: :fill) %>
+            <div class='card-img-overlay'>
+              <h2 class='card-title'><%= link_to "#{cocktail.name}", cocktail_path(cocktail) %></h2>
+              <br>
+              <%= cocktail.ingredients do |ingredient| %>
+                <li><%= ingredient.name %></li>
+              <% end %> 
+            </div>
           </div>
         </div>
       <% end %>
