@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://static3.bigstockphoto.com/7/7/1/large1500/177323245.jpg')">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://i.pinimg.com/originals/eb/ec/e4/ebece441f102d8f8814625cfa24f7fa0.png')">
   <div class="container mt-2">
   <h1>Mr Cocktail</h1>
   <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-warning" %>
@@ -10,13 +10,13 @@
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card m-4">
             <% if cocktail.photo.attached? %>
-              <%= cl_image_tag(cocktail.photo.key, height: 300, width: 300, crop: :fill) %> 
+              <%= cl_image_tag(cocktail.photo.key, height: 300, width: 290, crop: :fill) %> 
             <% end %>
             <div class='card-img-overlay'>
               <h2 class='card-title'><%= link_to "#{cocktail.name}", cocktail_path(cocktail) %></h2>
               <br>
               <%= cocktail.ingredients do |ingredient| %>
-                <li><%= ingredient.name %></li>
+                <%= ingredient.descrition.name %>
               <% end %> 
             </div>
           </div>
